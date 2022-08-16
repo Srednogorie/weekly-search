@@ -3,11 +3,12 @@ import {useIsUserLogged} from "../hooks"
 import {SingleArticle} from "../db/fetchers"
 import AdminButtons from "./AdminButtons"
 import {ArticleProps, ProviderMapInterface} from "../types"
+import moment from "moment";
 
 
 const Detail: React.FC<ArticleProps> = ({article}) => {
     const {provider} = article
-    // const dateTime = new Date(article.created * 1000).toLocaleDateString()
+    const date = moment(article.created * 1000).format("MMMM Do YYYY")
     const isLogged = useIsUserLogged()
     const providerMap: ProviderMapInterface = {
         "JavaScriptWeekly": ["border-[#f4a261]", "hover:bg-[#f4a261]", "https://javascriptweekly.com/issues/", "JavaScript Weekly"],
@@ -28,7 +29,7 @@ const Detail: React.FC<ArticleProps> = ({article}) => {
     return (
         <>
             <article className={classString}>
-                <p className="font-normal text-[#264653] text-xs mb-1">{article.created}</p>
+                <p className="font-normal text-[#264653] text-xs mb-1">{date}</p>
                 {
                     article.article_url.length > 0 && article.article_url[0].length > 0 ?
                         <h5 className="mb-2 text-lg font-bold tracking-tight text-[#264653] underline italic">
