@@ -3,8 +3,7 @@ import {useIsUserLogged} from "../hooks"
 import {SingleArticle} from "../db/fetchers"
 import AdminButtons from "./AdminButtons"
 import {ArticleProps, ProviderMapInterface} from "../types"
-import moment from "moment";
-
+import moment from "moment"
 
 const Detail: React.FC<ArticleProps> = ({article}) => {
     const {provider} = article

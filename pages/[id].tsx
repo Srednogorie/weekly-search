@@ -5,13 +5,18 @@ import NavBar from "../components/NavBar"
 import Detail from "../components/Detail"
 import {GetStaticPaths, GetStaticProps, NextPage} from "next"
 import {ArticleProps} from "../types"
+import ClipLoader from "react-spinners/ClipLoader"
 
 const Article: NextPage<ArticleProps> = ({article}) => {
     const router = useRouter()
 
     if (router.isFallback) {
         return (
-            <div>loading</div>
+            <div className="flex h-screen">
+                <div className="m-auto">
+                    <ClipLoader className="!w-[60px] !h-[60px] !border-4 !border-t-[#2A9D8F] !border-r-[#2A9D8F] !border-l-[#2A9D8F]"/>
+                </div>
+            </div>
         )
     } else {
         if (article) {
