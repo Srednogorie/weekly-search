@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 .idea/
+copy-documents.js
+firebase-admin-sdk.json
+.env
 
 # testing
 /coverage
