@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {getDocument, isLoggedIn} from "./db/utils";
+import {isLoggedIn} from "./db/utils";
 
 function useIsUserLogged() {
     const [isLogged, setIsLogged] = useState(false)
