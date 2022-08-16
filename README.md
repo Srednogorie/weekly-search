@@ -17,3 +17,5 @@ https://nodeweekly.com/
 GCP for cron jobs & cloud functions, Vercel for hosting
 
 https://github.com/Srednogorie/weekly-search
+
+https://weekly-search.vercel.app/

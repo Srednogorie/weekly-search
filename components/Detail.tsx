@@ -50,14 +50,14 @@ const Detail: React.FC<ArticleProps> = ({article}) => {
 
                     </Fragment>
                 )}
-                <p className="font-normal text-[#264653] text-sm mt-3 font-semibold">
+                <div className="font-normal text-[#264653] text-sm mt-3 font-semibold">
                     Source
-                    <div>
+                    <p>
                         <a rel="noreferrer" href={providerMap[provider][2] + article.issue_number} target="_blank" className="underline italic font-normal">
                             {providerMap[provider][3]}
                         </a>
-                    </div>
-                </p>
+                    </p>
+                </div>
                 {(clientArticle && clientArticle.protected) && <p className="text-red-400">PROTECTED</p>}
             </article>
             {(isLogged && clientArticle) && <AdminButtons article={clientArticle}/>}

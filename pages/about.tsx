@@ -19,7 +19,7 @@ const About: NextPage = () => {
                 <h1 className="text-[#264653] text-2xl py-3">Deployment</h1>
                 <p className="italic text-[#F4A261]">GCP for cron jobs & cloud functions, Vercel for hosting</p>
                 <p className="italic text-[#F4A261]">https://github.com/Srednogorie/weekly-search</p>
-                <p className="italic text-[#F4A261]">https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51</p>
+                <p className="italic text-[#F4A261]">https://weekly-search.vercel.app/</p>
             </div>
         </Fragment>
     )
