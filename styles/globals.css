@@ -56,3 +56,11 @@ input[type="search" i]::-webkit-search-cancel-button {
 .h-screen{
   height:calc(100vh - 6rem)!important;
 }
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50
+}

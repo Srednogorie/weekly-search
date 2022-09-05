@@ -1,6 +1,5 @@
 import React from "react"
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
-import {Fragment} from "preact"
 import NavBar from "../components/NavBar"
 import {ErrorMessage, Field, Form, Formik} from "formik"
 import {useRouter} from "next/router"
@@ -25,7 +24,7 @@ const Login: React.FC = () => {
             });
     }
     return (
-        <Fragment>
+        <>
             <NavBar/>
             <section>
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto mt-28 lg:py-0">
@@ -86,7 +85,7 @@ const Login: React.FC = () => {
                     </div>
                 </div>
             </section>
-        </Fragment>
+        </>
     )
 }
 

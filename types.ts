@@ -10,3 +10,11 @@ export interface Article {
 export interface ArticleProps {
     article: Article
 }
+
+export interface BookmarkProps {
+    articles: Article[]
+}
+
+export type ColorMapInterface = {
+    [key: string]: Array<string>
+}

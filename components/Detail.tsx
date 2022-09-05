@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from "react"
+import React, {useEffect, useState} from "react"
 import {useIsUserLogged} from "../hooks"
 import {SingleArticle} from "../db/fetchers"
 import AdminButtons from "./AdminButtons"
@@ -38,7 +38,7 @@ const Detail: React.FC<ArticleProps> = ({article}) => {
                 }
                 <p className="font-normal text-[#264653]">{article.description}</p>
                 {article.article_additional_urls.length > 0 && (
-                    <Fragment>
+                    <>
                         <p className="text-sm text-[#264653] mt-3 font-semibold">Additional Urls</p>
                         <ul>
                             {article.article_additional_urls.map(url => (
@@ -48,7 +48,7 @@ const Detail: React.FC<ArticleProps> = ({article}) => {
                             ))}
                         </ul>
 
-                    </Fragment>
+                    </>
                 )}
                 <div className="font-normal text-[#264653] text-sm mt-3 font-semibold">
                     Source

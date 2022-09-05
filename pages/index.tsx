@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import algoliasearch from 'algoliasearch/lite'
 import {InstantSearch, SearchBox, Hits, Configure, SearchBoxProps} from 'react-instantsearch-hooks-web'
-import {Fragment} from "react"
 import Hit from "../components/Hit"
 import CustomRefinementList from "../components/CustomRefinementList"
 import NavBar from "../components/NavBar"
@@ -17,9 +16,9 @@ const queryHook: SearchBoxProps['queryHook'] = (query, search) => {
 
 const Home: NextPage = () => {
     return (
-        <Fragment>
+        <div className={"flex flex-col h-screen"}>
             <NavBar/>
-            <div className="flex flex-col items-center justify-start h-screen mt-6">
+            <div className="flex flex-col items-center justify-start flex-grow">
               <InstantSearch searchClient={searchClient} indexName="JsWeeklyArticles">
                   <SearchBox
                       classNames={
@@ -43,14 +42,16 @@ const Home: NextPage = () => {
                                 </svg>
                       }
                   />
-                  <CustomRefinementList attribute="provider"/>
+                  <div className={"min-h-[1.5rem] mb-4"}>
+                      <CustomRefinementList attribute="provider"/>
+                  </div>
                   <hr className="border border-[#264653] w-full opacity-60 mb-4"/>
                   <Configure hitsPerPage={15}/>
-                  <Hits hitComponent={Hit} classNames={{root: "flex-grow"}}/>
+                  <Hits hitComponent={Hit}/>
               </InstantSearch>
-              <Footer/>
             </div>
-        </Fragment>
+            <Footer/>
+        </div>
   )
 }
 

@@ -12,7 +12,7 @@ const CustomRefinementList = (props: UseRefinementListProps) => {
         const reactWeekly = items.find(x => x.value === 'ReactStatusWeekly')
         const reactWeeklyCount = reactWeekly ? reactWeekly.count : 0
         return (
-            <div className="ais-RefinementList mb-4">
+            <div className="ais-RefinementList">
                 <ul className="ais-RefinementList-list flex">
                     <li className="ais-RefinementList-item ml-4 mr-4">
                         <label className="ais-RefinementList-label cursor-pointer">

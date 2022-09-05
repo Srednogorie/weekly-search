@@ -13,16 +13,23 @@ const NavBar: React.FC = () => {
                         </a>
                     </Link>
                 </div>
-                <div id="navbar-default">
-                    <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium cursor-pointer">
-                        <li>
-                            <Link href="/about" className="block py-2 pr-4 pl-3 text-[#264653]">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </Link>
-                        </li>
-                    </ul>
+                <div className="flex mt-4">
+                    <Link href="/bookmarks">
+                        <a className={"cursor-pointer has-tooltip"}>
+                            <span className='tooltip rounded shadow-lg p-1 bg-[#264653] text-white mt-8 opacity-70 text-xs'>Bookmarks</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="#264653">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"/>
+                            </svg>
+                        </a>
+                    </Link>
+                    <Link href="/about">
+                        <a className={"cursor-pointer has-tooltip ml-5"}>
+                            <span className='tooltip rounded shadow-lg p-1 bg-[#264653] text-white mt-8 opacity-70 text-xs'>About</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="#264653" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </a>
+                    </Link>
                 </div>
             </div>
         </nav>
