@@ -21,8 +21,8 @@ const CustomRefinementList = (props: UseRefinementListProps) => {
                                 className="ais-RefinementList-checkbox align-text-top text-current focus:outline-offset-0 cursor-pointer"
                                 type="checkbox" value="JavaScriptWeekly"
                             />
-                            <span className="ais-RefinementList-labelText pl-2 italic">JavaScript Weekly</span>
-                            <span className="ais-RefinementList-count pl-2 italic">{jsWeeklyCount}</span>
+                            <span className="ais-RefinementList-labelText pl-2 italic">JavaScript</span>
+                            <span className="hidden sm:inline-block ais-RefinementList-count pl-1 italic">Weekly {jsWeeklyCount}</span>
                         </label>
                     </li>
                     <li className="ais-RefinementList-item ml-4 mr-4">
@@ -32,8 +32,8 @@ const CustomRefinementList = (props: UseRefinementListProps) => {
                                 className="ais-RefinementList-checkbox align-text-top text-current focus:outline-offset-0 cursor-pointer"
                                 type="checkbox" value="NodeJsWeekly"
                             />
-                            <span className="ais-RefinementList-labelText pl-2 italic">NodeJs Weekly</span>
-                            <span className="ais-RefinementList-count pl-2 italic">{nodeWeeklyCount}</span>
+                            <span className="ais-RefinementList-labelText pl-2 italic">NodeJs</span>
+                            <span className="hidden sm:inline-block ais-RefinementList-count pl-1 italic">Weekly {nodeWeeklyCount}</span>
                         </label>
                     </li>
                     <li className="ais-RefinementList-item ml-4 mr-4">
@@ -43,8 +43,8 @@ const CustomRefinementList = (props: UseRefinementListProps) => {
                                 className="ais-RefinementList-checkbox align-text-top text-current focus:outline-offset-0 cursor-pointer"
                                 type="checkbox" value="ReactStatusWeekly"
                             />
-                            <span className="ais-RefinementList-labelText pl-2 italic">React Status</span>
-                            <span className="ais-RefinementList-count pl-2 italic">{reactWeeklyCount}</span>
+                            <span className="ais-RefinementList-labelText pl-2 italic">React</span>
+                            <span className="hidden sm:inline-block ais-RefinementList-count pl-1 italic">Status {reactWeeklyCount}</span>
                         </label>
                     </li>
                 </ul>
