@@ -1,5 +1,5 @@
 ### Frontend
-React, NextJs, Tailwind, SWR, Formic, Algolia's react-instantsearch-hooks
+React, NextJs, Typescript, Tailwind, SWR, Formic, Algolia's react-instantsearch-hooks
 
 Color scheme - https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51
 
