@@ -53,9 +53,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     // With fallback being true the id will always be in the context
     const params = context.params!
     const docSnapshot = await serverFirestore.collection("WeeklyArticles").doc(params.id).get()
-    let entry = {...docSnapshot.data(), id: docSnapshot.id}
-    entry.created = entry.created.seconds
-    if (entry) {
+    if (docSnapshot.exists) {
+        let entry = {...docSnapshot.data(), id: docSnapshot.id}
+        entry.created = entry.created.seconds
         return {
             props: {
                 article: entry
@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         }
     } else {
         return {
-            props: {}
+            notFound: true
         }
     }
 }
