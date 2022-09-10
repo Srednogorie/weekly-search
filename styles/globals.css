@@ -53,10 +53,6 @@ input[type="search" i]::-webkit-search-cancel-button {
   display: none;
 }
 
-.h-screen{
-  height:calc(100vh - 6rem)!important;
-}
-
 .tooltip {
   @apply invisible absolute;
 }
