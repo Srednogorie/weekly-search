@@ -1,11 +1,18 @@
 import {useRefinementList, UseRefinementListProps} from "react-instantsearch-hooks-web"
-import React from "react"
+import React, {useEffect, useRef} from "react"
 
 type CustomUseRefinementListProps = UseRefinementListProps & {setNoHits: React.Dispatch<React.SetStateAction<boolean>>}
 
 const CustomRefinementList = (props: CustomUseRefinementListProps) => {
-    const {items, refine,} = useRefinementList(props)
+    const {items, refine} = useRefinementList(props)
+    const firstRender = useRef(true)
 
+    useEffect(() => {
+        if (firstRender.current) {
+            firstRender.current = false
+            return
+        }
+    });
     if (items.length > 0) {
         props.setNoHits(false)
         const jsWeekly = items.find(x => x.value === 'JavaScriptWeekly')
@@ -54,7 +61,9 @@ const CustomRefinementList = (props: CustomUseRefinementListProps) => {
             </div>
         )
     } else {
-        props.setNoHits(true)
+        if (!firstRender.current) {
+            props.setNoHits(true)
+        }
         return null
     }
 }
