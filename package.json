@@ -2,7 +2,10 @@
   "name": "weekly-search",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {  
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
